@@ -4,13 +4,19 @@
     "tailwind-merge": "1.6.2"
   },
   "files": [
-    "lib"
+    "lib",
+    "README.md"
   ],
   "name": "@maksimyakush/ui",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "author": "Maksim Yakush (http://maksimyakush.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksimyakush/ui"
+  },
+  "author": "Maksim Yakush",
+  "homepage": "https://github.com/maksimyakush/ui",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.19.0",
