@@ -2,7 +2,19 @@
 <h3 align="center">A small ui library</h3>
 </p>
 
-## Take a look at all the components [here](https://ui-maksimyakush.vercel.app)
+>Take a look at all the components [here](https://ui-maksimyakush.vercel.app)
+
+### Installation
+
+just copypaste this
+``
+npm i @maksimyakush/ui
+``
+
+and then add styles to your root file
+``
+import '@maksimyakush/ui/lib/index.css';
+``
 
 ### Currently available components
 
