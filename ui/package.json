@@ -1,0 +1,61 @@
+{
+  "dependencies": {
+    "classnames": "2.3.1",
+    "tailwind-merge": "1.6.2"
+  },
+  "files": [
+    "lib"
+  ],
+  "name": "@maksimyakush/ui",
+  "version": "1.0.9",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "author": "Maksim Yakush (http://maksimyakush.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@emotion/react": "11.10.4",
+    "@rollup/plugin-commonjs": "23.0.0",
+    "@rollup/plugin-node-resolve": "15.0.0",
+    "@rollup/plugin-url": "7.0.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/addons": "6.5.13",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/preset-scss": "1.0.3",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "6.5.13",
+    "@svgr/rollup": "6.3.1",
+    "@tailwindcss/typography": "0.5.7",
+    "@types/react": "18.0.18",
+    "autoprefixer": "10.4.12",
+    "babel-loader": "^8.2.5",
+    "css-loader": "6.7.1",
+    "generate-react-cli": "7.3.0",
+    "postcss": "8.4.18",
+    "postcss-loader": "7.0.1",
+    "react": "18.2.0",
+    "rollup": "2.79.0",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-typescript2": "0.33.0",
+    "sass": "1.54.8",
+    "sass-loader": "13.0.2",
+    "style-loader": "3.3.1",
+    "stylelint": "14.11.0",
+    "stylelint-config-idiomatic-order": "8.1.0",
+    "stylelint-order": "5.0.0",
+    "tailwindcss": "3.1.8",
+    "typescript": "4.8.2"
+  },
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "sb:build": "build-storybook",
+    "sb": "start-storybook -p 6006",
+    "component": "generate-react component"
+  }
+}

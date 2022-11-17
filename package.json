@@ -1,0 +1,27 @@
+{
+  "name": "ui",
+  "version": "0.0.1",
+  "main": "app/lib/index.js",
+  "author": "Maksim Yakush (http://maksimyakush.com/)",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "playground",
+    "ui"
+  ],
+  "resolutions": {
+    "webpack": "^5.0.0",
+    "webpack-virtual-modules": "^0.4.2"
+  },
+  "scripts": {
+    "dev": "npm run dev -w @maksimyakush/ui | npm run dev -w playground",
+    "build": "npm run build -w @maksimyakush/ui",
+    "sb:build": "npm run sb:build -w @maksimyakush/ui",
+    "sb": "npm run sb -w @maksimyakush/ui",
+    "component": "npm run component -w @maksimyakush/ui"
+  },
+  "devDependencies": {
+    "@mdx-js/react": "^1.6.22",
+    "@parcel/transformer-mdx": "2.7.0"
+  }
+}

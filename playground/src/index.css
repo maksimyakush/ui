@@ -1,0 +1,11 @@
+
+@import '@maksimyakush/ui/lib/index.css';
+
+body {
+    font-family: var(--ds-body-ff);
+    font-weight: var(--ds-body-fw);
+    font-size: var(--ds-body-fs);
+    line-height: var(--ds-body-lh);
+    background-color: var(--ds-body-bg);
+    color: var(--ds-body-co);
+}
