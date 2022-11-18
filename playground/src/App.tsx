@@ -1,4 +1,4 @@
-import { Button, Tabs, Tab } from "@maksimyakush/ui";
+import { Button, Tabs, Tab, Container } from "@maksimyakush/ui";
 import { useState } from "react";
 
 export const App = () => {
@@ -24,6 +24,9 @@ export const App = () => {
         </Tab>
       </Tabs>
       <Button>Click</Button>
+      <Container size='sm'><p style={{backgroundColor: 'yellow'}}>
+      Hello there
+        </p> </Container>
     </div>
   );
 };

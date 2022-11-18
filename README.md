@@ -10,7 +10,6 @@ just copypaste this
 ``
 npm i @maksimyakush/ui
 ``
-
 and then add styles to your root file
 ``
 import '@maksimyakush/ui/lib/index.css';
@@ -22,3 +21,4 @@ import '@maksimyakush/ui/lib/index.css';
 - Tabs
 - Typography
 - Switcher
+- Container
