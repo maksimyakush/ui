@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
-import { ToLowercase } from "../../types";
+import { getGlobalPropsClasses } from "../../utils/get-global-props";
+import { ToLowercase, GlobalProps } from "../../types";
 
 export enum Size {
   XS = "xs",
@@ -23,8 +24,18 @@ type ContainerProps = {
   size?: ToLowercase<Size>;
 };
 
-export const Container = ({ size = "xl", children }: ContainerProps) => {
+export const Container = ({
+  size = "xl",
+  children,
+  ...props
+}: ContainerProps & GlobalProps) => {
   return (
-    <div className={twMerge(`my-0 mx-auto ${SIZE_MAPS[size]}`)}>{children}</div>
+    <div
+      className={twMerge(
+        `my-0 mx-auto ${SIZE_MAPS[size]} ${getGlobalPropsClasses(props)}`
+      )}
+    >
+      {children}
+    </div>
   );
 };

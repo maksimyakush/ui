@@ -7,6 +7,11 @@ import {
   ForwardedRef,
 } from "react";
 import { twMerge } from "tailwind-merge";
+import { GlobalProps } from "../../types";
+import {
+  extractGlobalProps,
+  getGlobalPropsClasses,
+} from "../../utils/get-global-props";
 
 type ToLowercaseEnumValues<T> = `${Lowercase<string & T>}`;
 
@@ -78,9 +83,11 @@ export const Button = forwardRef(
       ...restProps
     }: ButtonProps<T> &
       ButtonOnClickProp<T> &
-      Omit<ComponentPropsWithRef<"button">, "type">,
+      Omit<ComponentPropsWithRef<"button">, "type"> &
+      GlobalProps,
     ref: ForwardedRef<HTMLButtonElement>
   ) => {
+    const { rest } = extractGlobalProps(restProps);
     return (
       <button
         ref={ref}
@@ -98,10 +105,11 @@ export const Button = forwardRef(
           SIZE_MAPS[size],
           disabled && DISABLED,
           VARIANT_MAPS[variant][color],
-          className
+          className,
+          getGlobalPropsClasses(restProps)
         )}
         onClick={onClick}
-        {...restProps}
+        {...rest}
       >
         {children}
       </button>

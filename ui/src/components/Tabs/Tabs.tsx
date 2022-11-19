@@ -1,5 +1,8 @@
 import { Children, useState } from "react";
+import { twMerge } from "tailwind-merge";
 import { useControlledState } from "../../hooks/useControlledState";
+import { GlobalProps } from "../../types";
+import { getGlobalPropsClasses } from "../../utils/get-global-props";
 import { Tab } from "./Tab";
 import { TabPanel } from "./TabPanel";
 import { TabsList } from "./TabsList/TabsList";
@@ -13,18 +16,19 @@ type TabsProps = {
 
 const Tabs = ({
   children,
-  value='',
+  value = "",
   onTabChange,
-  defaultValue='',
-}: TabsProps) => {
+  defaultValue = "",
+  ...restProps
+}: TabsProps & GlobalProps) => {
   const [activeTab, setActiveTab] = useControlledState({
     value,
     onChange: onTabChange,
-    defaultValue
+    defaultValue,
   });
 
   return (
-    <div className="grid gap-4">
+    <div className={twMerge("grid gap-4", getGlobalPropsClasses(restProps))}>
       <TabsList value={activeTab} setActiveTab={setActiveTab}>
         {children}
       </TabsList>

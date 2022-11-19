@@ -1,4 +1,10 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
+import { GlobalProps } from "../../types";
+import {
+  extractGlobalProps,
+  getGlobalPropsClasses,
+} from "../../utils/get-global-props";
 
 type ToLowercaseEnumValues<T> = `${Lowercase<string & T>}`;
 enum Variant {
@@ -26,19 +32,26 @@ type TypographyProps<C extends ElementType> = {
   as?: C;
   children: ReactNode;
   variant?: VariantVariants;
-} & ComponentPropsWithoutRef<C>;
+};
 
 export const Typography = <C extends ElementType = "p">({
   as,
   variant = "body1",
   children,
   ...restProps
-}: TypographyProps<C>) => {
+}: TypographyProps<C> & ComponentPropsWithoutRef<C> & GlobalProps) => {
   const Component = as || "p";
+  const { rest } = extractGlobalProps(restProps);
 
   return (
     <>
-      <Component className={VARIANT_MAPS[variant]} {...restProps}>
+      <Component
+        className={twMerge(
+          VARIANT_MAPS[variant],
+          getGlobalPropsClasses(restProps)
+        )}
+        {...rest}
+      >
         {children}
       </Component>
     </>

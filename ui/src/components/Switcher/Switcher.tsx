@@ -1,13 +1,13 @@
 import { forwardRef, ForwardedRef } from "react";
 import { twMerge } from "tailwind-merge";
-
-type ToLowercaseEnumValues<T> = `${Lowercase<string & T>}`;
+import { GlobalProps, ToLowercase } from "../../types";
+import { getGlobalPropsClasses } from "../../utils/get-global-props";
 
 enum Color {
   PRIMARY = "primary",
   SECONDARY = "secondary",
 }
-type ColorVaraints = ToLowercaseEnumValues<Color>;
+type ColorVaraints = ToLowercase<Color>;
 
 type SwitcherProps = {
   checked: boolean;
@@ -18,11 +18,22 @@ type SwitcherProps = {
 
 export const Switcher = forwardRef(
   (
-    { checked, onChange, color = "secondary", label = "" }: SwitcherProps,
+    {
+      checked,
+      onChange,
+      color = "secondary",
+      label = "",
+      ...restProps
+    }: SwitcherProps & GlobalProps,
     ref: ForwardedRef<HTMLElement>
   ) => {
     return (
-      <span className="inline-flex items-center gap-1">
+      <span
+        className={twMerge(
+          "inline-flex items-center gap-1",
+          getGlobalPropsClasses(restProps)
+        )}
+      >
         <span className="inline-flex relative w-10 h-6">
           <span
             className={twMerge(
@@ -78,7 +89,7 @@ export const Switcher = forwardRef(
           />
         </span>
         {label && (
-          <label htmlFor="switcher" className='text-base font-semibold'>
+          <label htmlFor="switcher" className="text-base font-semibold">
             {label}
           </label>
         )}

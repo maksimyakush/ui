@@ -1,4 +1,4 @@
-import { Button, Tabs, Tab, Container } from "@maksimyakush/ui";
+import { Button, Tabs, Tab, Container, Typography } from "@maksimyakush/ui";
 import { useState } from "react";
 
 export const App = () => {
@@ -12,7 +12,7 @@ export const App = () => {
         minHeight: "50vh",
       }}
     >
-      <Tabs value={value} onTabChange={(value) => setValue(value)}>
+      <Tabs p={1} value={value} onTabChange={(value: any) => setValue(value)}>
         <Tab label="qwerty222" value="1">
           Helen
         </Tab>
@@ -23,10 +23,11 @@ export const App = () => {
           Peter
         </Tab>
       </Tabs>
-      <Button>Click</Button>
-      <Container size='sm'><p style={{backgroundColor: 'yellow'}}>
-      Hello there
-        </p> </Container>
+      <Button px={5}>Click</Button>
+      <Container size="sm" mt={4} mb={10}>
+        <p style={{ backgroundColor: "yellow" }}>Hello there</p>{" "}
+      </Container>
+      <Typography mt={6}>Hi</Typography>
     </div>
   );
 };

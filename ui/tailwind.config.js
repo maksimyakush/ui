@@ -1,8 +1,33 @@
 /** @type {import('tailwindcss').Config} */
-
 const plugin = require("tailwindcss/plugin");
+
+const createSafeList = () => {
+  const values = [1, 2, 3, 4, 5, 6, 8, 9, 10];
+  const classes = [
+    "m-",
+    "p-",
+    "mx-",
+    "my-",
+    "px-",
+    "py-",
+    "mt-",
+    "mr-",
+    "mb-",
+    "ml-",
+    "pt-",
+    "pr-",
+    "pb-",
+    "pl-",
+  ]
+  return values.reduce((acc, curr) => {
+    return acc.concat(classes.map((c) => c + curr));
+  }, []);
+};
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  safelist: createSafeList(),
+
   theme: {
     extend: {
       typography: (theme) => ({
@@ -14,6 +39,9 @@ module.exports = {
           },
         },
       }),
+      spacing: {
+        4: "1rem",
+      },
     },
     fontFamily: {
       nunito: ["nunito", "sans-serif"],
