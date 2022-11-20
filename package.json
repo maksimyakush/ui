@@ -18,10 +18,9 @@
     "build": "npm run build -w @maksimyakush/ui",
     "sb:build": "npm run sb:build -w @maksimyakush/ui",
     "sb": "npm run sb -w @maksimyakush/ui",
-    "component": "npm run component -w @maksimyakush/ui"
+    "component": "generate-react component"
   },
   "devDependencies": {
-    "@mdx-js/react": "^1.6.22",
-    "@parcel/transformer-mdx": "2.7.0"
+    "generate-react-cli": "8.0.1"
   }
 }

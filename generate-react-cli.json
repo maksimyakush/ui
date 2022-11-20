@@ -5,7 +5,7 @@
   "testLibrary": "None",
   "component": {
     "default": {
-      "path": "src/components",
+      "path": "ui/src/components",
       "withStyle": true,
       "withTest": false,
       "withStory": true,

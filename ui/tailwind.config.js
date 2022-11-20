@@ -144,7 +144,7 @@ module.exports = {
         500: "hsl(0deg 0% 62% / 100%)",
         600: "hsl(0deg 0% 46% / 100%)",
         700: "hsl(0deg 0% 38% / 100%)",
-        800: "hsl(0deg 0% 26% / 100%)",
+        800: "hsl(0deg 0% 24% / 100%)",
         900: "hsl(0deg 0% 13% / 100%)",
       },
     },
@@ -158,7 +158,7 @@ module.exports = {
           fontFamily: theme("fontFamily.nunito"),
           lineHeight: theme("lineHeight.tight"),
           letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 26% / 100%)",
+          color: "hsl(0deg 0% 24% / 100%)",
         },
         ".t-h2": {
           fontSize: "clamp(1.5rem, 1.2rem + 1.4286vw, 3rem)",
@@ -166,7 +166,7 @@ module.exports = {
           fontFamily: theme("fontFamily.nunito"),
           lineHeight: theme("lineHeight.tight"),
           letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 26% / 100%)",
+          color: "hsl(0deg 0% 24% / 100%)",
         },
         ".t-h3": {
           fontSize: theme("fontSize.4xl"),
@@ -174,7 +174,7 @@ module.exports = {
           fontFamily: theme("fontFamily.nunito"),
           lineHeight: theme("lineHeight.tight"),
           letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 26% / 100%)",
+          color: "hsl(0deg 0% 24% / 100%)",
         },
         ".t-h4": {
           fontSize: theme("fontSize.3xl"),
@@ -182,7 +182,7 @@ module.exports = {
           fontFamily: theme("fontFamily.nunito"),
           lineHeight: theme("lineHeight.normal"),
           letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 26% / 100%)",
+          color: "hsl(0deg 0% 24% / 100%)",
         },
         ".t-h5": {
           fontSize: theme("fontSize.2xl"),
@@ -190,7 +190,7 @@ module.exports = {
           fontFamily: theme("fontFamily.nunito"),
           lineHeight: theme("lineHeight.normal"),
           letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 26% / 100%)",
+          color: "hsl(0deg 0% 24% / 100%)",
         },
         ".t-h6": {
           fontSize: theme("fontSize.xl"),
@@ -198,15 +198,15 @@ module.exports = {
           fontFamily: theme("fontFamily.nunito"),
           lineHeight: theme("lineHeight.normal"),
           letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 26% / 100%)",
+          color: "hsl(0deg 0% 24% / 100%)",
         },
         ".t-body1": {
-          fontSize: theme("fontSize.xl"),
+          fontSize: theme("fontSize.lg"),
           fontWeight: theme("fontWeight.medium"),
           fontFamily: theme("fontFamily.nunito"),
           lineHeight: theme("lineHeight.normal"),
           letterSpacing: theme("letterSpacing.normal"),
-          color: "hsl(0deg 0% 26% / 100%)", //grey.800
+          color: "hsl(0deg 0% 24% / 100%)", //grey.800
         },
       };
 

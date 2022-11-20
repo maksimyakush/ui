@@ -1,10 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply text-2xl;
-  }
+:root {
+  --ds-body-ff: theme(fontFamily.nunito);
+  --ds-body-fw: theme(fontWeight.medium);
+  --ds-body-fs: theme(fontSize.base);
+  --ds-body-lh: theme(lineHeight.normal);
+  --ds-body-bg: theme(colors.common.white);
+  --ds-body-c: theme(colors.grey.800);
+
+  --ds-color-white: theme(colors.common.white);
+  --ds-color-black: theme(colors.common.black);
+
+  --ds-color-primary: theme(colors.primary.main);
+  --ds-color-primary-light: theme(colors.primary.light);
+  --ds-color-primary-dark: theme(colors.primary.dark);
+
+  --ds-color-secondary: theme(colors.secondary.main);
+  --ds-color-secondary-light: theme(colors.secondary.light);
+  --ds-color-secondary-dark: theme(colors.secondary.dark);
+
+  --ds-color-error: theme(colors.error.main);
+  --ds-color-error-light: theme(colors.error.light);
+  --ds-color-error-dark: theme(colors.error.dark);
+
+  --ds-color-warning: theme(colors.warning.main);
+  --ds-color-warning-light: theme(colors.warning.light);
+  --ds-color-warning-dark: theme(colors.warning.dark);
+
+  --ds-color-info: theme(colors.info.main);
+  --ds-color-info-light: theme(colors.info.light);
+  --ds-color-info-dark: theme(colors.info.dark);
+
+  --ds-color-success: theme(colors.success.main);
+  --ds-color-success-light: theme(colors.success.light);
+  --ds-color-success-dark: theme(colors.success.dark);
+
+  --ds-color-grey-100: theme(colors.grey[100]);
+  --ds-color-grey-200: theme(colors.grey[200]);
+  --ds-color-grey-300: theme(colors.grey[300]);
+  --ds-color-grey-400: theme(colors.grey[400]);
+  --ds-color-grey-500: theme(colors.grey[500]);
+  --ds-color-grey-600: theme(colors.grey[600]);
+  --ds-color-grey-700: theme(colors.grey[700]);
+  --ds-color-grey-800: theme(colors.grey[800]);
+  --ds-color-grey-900: theme(colors.grey[900]);
 }
