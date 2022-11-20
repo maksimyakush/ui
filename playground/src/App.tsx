@@ -1,4 +1,11 @@
-import { Button, Tabs, Tab, Container, Typography } from "@maksimyakush/ui";
+import {
+  Button,
+  Tabs,
+  Tab,
+  Container,
+  Typography,
+  Grid,
+} from "@maksimyakush/ui";
 import { useState } from "react";
 
 export const App = () => {
@@ -12,22 +19,14 @@ export const App = () => {
         minHeight: "50vh",
       }}
     >
-      <Tabs p={1} value={value} onTabChange={(value: any) => setValue(value)}>
-        <Tab label="qwerty222" value="1">
-          Helen
-        </Tab>
-        <Tab label="qwerty" value="2">
-          Maksim
-        </Tab>
-        <Tab label="qwerty" value="3">
-          Peter
-        </Tab>
-      </Tabs>
-      <Button px={5}>Click</Button>
-      <Container size="sm" mt={4} mb={10}>
-        <p style={{ backgroundColor: "yellow" }}>Hello there</p>{" "}
-      </Container>
-      <Typography mt={6}>Hi</Typography>
+      <Grid>
+        <Grid.Column md={6}><p style={{backgroundColor: 'rgba(0,0,0,0.1)'}}>Col1</p>   </Grid.Column>
+        <Grid.Column md={6}>Col2</Grid.Column>
+        <Grid.Column md={6}>Col3</Grid.Column>
+        <Grid.Column md={6}>Col4</Grid.Column>
+        <Grid.Column md={6}>Col5</Grid.Column>
+        <Grid.Column md={6}>Col6</Grid.Column>
+      </Grid>
     </div>
   );
 };

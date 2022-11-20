@@ -22,3 +22,4 @@ import '@maksimyakush/ui/lib/index.css';
 - Typography
 - Switcher
 - Container
+- Grid

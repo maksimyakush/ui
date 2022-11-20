@@ -18,7 +18,7 @@ const createSafeList = () => {
     "pr-",
     "pb-",
     "pl-",
-  ]
+  ];
   return values.reduce((acc, curr) => {
     return acc.concat(classes.map((c) => c + curr));
   }, []);
@@ -26,7 +26,62 @@ const createSafeList = () => {
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  safelist: createSafeList(),
+  safelist: [
+    ...createSafeList(),
+    "sm:col-span-3",
+    "sm:col-span-4",
+    "sm:col-span-6",
+    "sm:col-span-12",
+    "md:col-span-3",
+    "md:col-span-4",
+    "md:col-span-6",
+    "md:col-span-12",
+    "lg:col-span-3",
+    "lg:col-span-4",
+    "lg:col-span-6",
+    "lg:col-span-12",
+    "xl:col-span-3",
+    "xl:col-span-4",
+    "xl:col-span-6",
+    "xl:col-span-12",
+    "gap-0",
+    "gap-1",
+    "gap-2",
+    "gap-3",
+    "gap-4",
+    "gap-5",
+    "gap-6",
+    "gap-7",
+    "gap-8",
+    "gap-9",
+    "gap-10",
+    // justifyContent
+    "justify-start",
+    "justify-end",
+    "justify-center",
+    "justify-between",
+    "justify-around",
+    "justify-evenly",
+    // justifyItems
+    "justify-items-start",
+    "justify-items-end",
+    "justify-items-center",
+    "justify-items-stretch",
+    // alignContent
+    "content-start",
+    "content-end",
+    "content-center",
+    "content-between",
+    "content-around",
+    "content-evenly",
+    "content-baseline",
+    // alignItems
+    "items-start",
+    "items-end",
+    "items-center",
+    "items-baseline",
+    "items-stretch",
+  ],
 
   theme: {
     extend: {
