@@ -29,5 +29,5 @@ export default {
     terser(),
   ],
   preserveModules: true,
-  external: ["react", "react/jsx-runtime", "tailwind-merge"],
+  external: ["react/jsx-runtime", "tailwind-merge"],
 };
