@@ -13,12 +13,7 @@ export const App = () => {
 
   return (
     <>
-      <Grid>
-        <Grid.Column md={6}>Hi</Grid.Column>
-        <Grid.Column md={6}>Hi</Grid.Column>
-        <Grid.Column md={6}>Hi</Grid.Column>
-        <Grid.Column md={6}>Hi</Grid.Column>
-      </Grid>
+      <Button  color='secondary'>Click</Button>
     </>
   );
 };

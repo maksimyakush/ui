@@ -37,13 +37,15 @@ type VariantVaraints = ToLowercaseEnumValues<Variant>;
 const VARIANT_MAPS = {
   [Variant.OUTLINED]: {
     [Color.PRIMARY]:
-      "bg-common-white text-primary-main border-2  border-primary-main",
+      "text-primary-main border-2  border-primary-main hover:border-primary-light hover:text-primary-light transition duration-150 ease-out",
     [Color.SECONDARY]:
-      "bg-common-white text-secondary-main border-2  border-secondary-main",
+      "text-secondary-main border-2  border-secondary-main hover:border-secondary-light hover:text-secondary-light transition duration-150 ease-out",
   },
   [Variant.CONTAINED]: {
-    [Color.PRIMARY]: "bg-primary-main",
-    [Color.SECONDARY]: "bg-secondary-main",
+    [Color.PRIMARY]:
+      "bg-primary-main hover:bg-primary-light transition duration-150 ease-out",
+    [Color.SECONDARY]:
+      "bg-secondary-main hover:bg-secondary-light transition duration-150 ease-out",
   },
 };
 
@@ -95,11 +97,15 @@ export const Button = forwardRef(
         type={type}
         className={twMerge(
           `
+            box-border
+            appearance-none
             border-0
+            border-solid
             cursor-pointer
             font-nunito
             font-bold
             tracking-widest
+            bg-common-transparent
             rounded-lg
             text-common-white`,
           SIZE_MAPS[size],

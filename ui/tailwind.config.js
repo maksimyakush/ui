@@ -105,6 +105,7 @@ module.exports = {
       common: {
         black: "hsl(0deg 0% 0%)",
         white: "hsl(0deg 0% 100% / 100%)",
+        transparent: "rgba(0, 0, 0, 0)",
       },
       primary: {
         main: "hsl(254deg 11% 32% / 100%)",
