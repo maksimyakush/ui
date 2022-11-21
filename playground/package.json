@@ -33,7 +33,7 @@
     "webpack-dev-server": "4.10.0"
   },
   "dependencies": {
-    "@maksimyakush/ui": "1.0.23",
+    "@maksimyakush/ui": "1.0.24",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }

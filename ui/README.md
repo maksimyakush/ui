@@ -18,8 +18,9 @@ import '@maksimyakush/ui/lib/index.css';
 ### Currently available components
 
 - Button
-- Tabs
-- Typography
-- Switcher
 - Container
 - Grid
+- Group
+- Switcher
+- Tabs
+- Typography
