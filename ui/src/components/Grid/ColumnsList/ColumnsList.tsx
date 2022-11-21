@@ -1,22 +1,42 @@
-import { ReactNode, useContext } from "react";
+import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
+import { GlobalProps, RangeOf } from "../../../types";
 import { getGlobalPropsClasses } from "../../../utils/get-global-props";
-import { useGridContext } from "../common";
 import { Column } from "./Column";
 
 type ColumnsListProps = {
   children: ReactNode;
+  gap?: RangeOf<0, 10>;
+  alignItems?: "start" | "center" | "end" | "stretch" | "baseline";
+  alignContent?:
+    | "start"
+    | "center"
+    | "end"
+    | "stretch"
+    | "between"
+    | "around"
+    | "evenly"
+    | "baseline";
+  justifyItems?: "start" | "center" | "end" | "stretch";
+  justifyContent?:
+    | "start"
+    | "center"
+    | "end"
+    | "stretch"
+    | "between"
+    | "around"
+    | "evenly";
 };
 
-const ColumnsList = ({ children }: ColumnsListProps) => {
-  const {
-    alignItems,
-    justifyItems,
-    alignContent,
-    justifyContent,
-    gap,
-    ...restProps
-  } = useGridContext();
+const ColumnsList = ({
+  alignItems,
+  justifyItems,
+  alignContent,
+  justifyContent,
+  gap,
+  children,
+  ...restProps
+}: ColumnsListProps  & GlobalProps) => {
   return (
     <div
       className={twMerge(
@@ -26,7 +46,7 @@ const ColumnsList = ({ children }: ColumnsListProps) => {
         `content-${alignContent}`,
         `items-${alignItems}`,
         `gap-${gap}`,
-        getGlobalPropsClasses(restProps),
+        getGlobalPropsClasses(restProps)
       )}
     >
       {children}

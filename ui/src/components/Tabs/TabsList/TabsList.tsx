@@ -12,7 +12,6 @@ export const TabsList = ({
   setActiveTab,
   ...props
 }: TabsListProps) => {
-  // const { activeTab, setActiveTab } = useTabsContext();
 
   return (
     <ul {...props} className="flex border-b border-b-grey-400">

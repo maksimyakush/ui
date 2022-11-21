@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { GlobalProps, RangeOf } from "../../types";
 import { ColumnsList, Column } from "./ColumnsList";
-import { GridContextProvider } from "./common";
 
 type GridProps = {
   children: ReactNode;
@@ -37,18 +36,16 @@ const Grid = ({
   ...restProps
 }: GridProps & GlobalProps) => {
   return (
-    <GridContextProvider
-      value={{
-        alignItems,
-        justifyItems,
-        alignContent,
-        justifyContent,
-        gap,
-        ...restProps,
-      }}
+    <ColumnsList
+      alignItems={alignItems}
+      justifyItems={justifyItems}
+      alignContent={alignContent}
+      justifyContent={justifyContent}
+      gap={gap}
+      {...restProps}
     >
-      <ColumnsList>{children}</ColumnsList>
-    </GridContextProvider>
+      {children}
+    </ColumnsList>
   );
 };
 
