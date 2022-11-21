@@ -81,6 +81,7 @@ module.exports = {
     "items-center",
     "items-baseline",
     "items-stretch",
+    "h-full"
   ],
 
   theme: {

@@ -12,16 +12,16 @@ export const Playground: ComponentStory<typeof Grid> = ({ ...args }) => {
   return (
     <Grid {...args}>
       <Grid.Column md={6} lg={3}>
-        <p style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col1</p>
+        <div style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col1</div>
       </Grid.Column>
       <Grid.Column md={6} lg={3}>
-        <p style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col2</p>
+        <div style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col2</div>
       </Grid.Column>
       <Grid.Column md={6} lg={3}>
-        <p style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col3</p>
+        <div style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col3</div>
       </Grid.Column>
       <Grid.Column md={6} lg={3}>
-        <p style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col4</p>
+        <div style={{ backgroundColor: "rgba(0,0,0,0.1)" }}>Col4</div>
       </Grid.Column>
     </Grid>
   );
@@ -32,5 +32,4 @@ Playground.args = {
   alignItems: "stretch",
   alignContent: "stretch",
   justifyItems: "stretch",
-  justifyContent: "stretch",
 };

@@ -28,6 +28,7 @@ export const getGlobalPropsClasses = ({
   p,
   px,
   py,
+  h
 }: any) => {
   const values = new Map([
     ["mt", mt],
@@ -44,6 +45,7 @@ export const getGlobalPropsClasses = ({
     ["p", p],
     ["px", px],
     ["py", py],
+    ["h", h]
   ]);
 
   const result = Array.from(values).reduce((acc, [key, value]) => {

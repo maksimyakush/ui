@@ -12,9 +12,11 @@ export const TabsList = ({
   setActiveTab,
   ...props
 }: TabsListProps) => {
-
   return (
-    <ul {...props} className="flex border-b border-b-grey-400">
+    <ul
+      {...props}
+      className="flex list-none p-0 m-0 border-0 border-b-grey-400 border-b-2 border-solid"
+    >
       {Children.map(children, (child) => {
         const isActive = child.props.value === value;
 

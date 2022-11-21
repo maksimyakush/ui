@@ -17,8 +17,8 @@ export const Tab = ({
   return (
     <li
       className={twMerge(
-        "p-4 cursor-pointer hover:bg-grey-100",
-        isActive && "border-b-2 border-b-grey-400"
+        "py-2 px-4 cursor-pointer hover:bg-grey-100",
+        isActive && "border-0 border-solid border-b-2 border-b-grey-400"
       )}
       onClick={onClick}
     >

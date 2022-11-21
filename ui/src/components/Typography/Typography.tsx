@@ -47,6 +47,7 @@ export const Typography = <C extends ElementType = "p">({
     <>
       <Component
         className={twMerge(
+          'box-border p-0 m-0',
           VARIANT_MAPS[variant],
           getGlobalPropsClasses(restProps)
         )}

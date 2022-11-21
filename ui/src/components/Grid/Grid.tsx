@@ -16,14 +16,6 @@ type GridProps = {
     | "evenly"
     | "baseline";
   justifyItems?: "start" | "center" | "end" | "stretch";
-  justifyContent?:
-    | "start"
-    | "center"
-    | "end"
-    | "stretch"
-    | "between"
-    | "around"
-    | "evenly";
 };
 
 const Grid = ({
@@ -31,7 +23,6 @@ const Grid = ({
   alignItems = "stretch",
   justifyItems = "stretch",
   alignContent = "stretch",
-  justifyContent = "stretch",
   gap = 0,
   ...restProps
 }: GridProps & GlobalProps) => {
@@ -40,7 +31,6 @@ const Grid = ({
       alignItems={alignItems}
       justifyItems={justifyItems}
       alignContent={alignContent}
-      justifyContent={justifyContent}
       gap={gap}
       {...restProps}
     >

@@ -56,6 +56,7 @@ const SIZE_MAPS: Record<Size, string> = {
 };
 
 const DISABLED = "cursor-not-allowed opacity-50";
+const FULL = "w-full";
 
 type ButtonProps<T> = {
   children: ReactNode;
@@ -65,6 +66,7 @@ type ButtonProps<T> = {
   disabled?: boolean;
   className?: string;
   type?: T;
+  full?: boolean;
 };
 
 type ButtonOnClickProp<T> = T extends "button"
@@ -80,6 +82,7 @@ export const Button = forwardRef(
       disabled = false,
       className,
       type = "button",
+      full = false,
       onClick,
       children,
       ...restProps
@@ -110,6 +113,7 @@ export const Button = forwardRef(
             text-common-white`,
           SIZE_MAPS[size],
           disabled && DISABLED,
+          full && FULL,
           VARIANT_MAPS[variant][color],
           className,
           getGlobalPropsClasses(restProps)
