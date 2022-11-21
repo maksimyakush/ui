@@ -5,3 +5,4 @@ export { Typography } from "./components/Typography";
 export { Tabs, Tab } from "./components/Tabs";
 export { Container } from "./components/Container";
 export { Grid } from "./components/Grid";
+export { Group } from "./components/Group";
