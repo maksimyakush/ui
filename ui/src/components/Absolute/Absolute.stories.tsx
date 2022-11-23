@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Absolute>;
 
 const Template: ComponentStory<typeof Absolute> = (args) => (
-  <Absolute {...args} w="fit">
+  <Absolute {...args}>
     <div
       style={{
         height: 300,
