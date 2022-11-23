@@ -1,9 +1,12 @@
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 import { GlobalProps, RangeOf } from "../../types";
 import { ColumnsList, Column } from "./ColumnsList";
+import { ColumnProps } from "./ColumnsList/Column";
 
 type GridProps = {
-  children: ReactNode;
+  children:
+    | ReactElement<ColumnProps, typeof Column>
+    | ReactElement<ColumnProps, typeof Column>[];
   gap?: RangeOf<0, 10>;
   alignItems?: "start" | "center" | "end" | "stretch" | "baseline";
   alignContent?:

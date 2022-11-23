@@ -31,7 +31,7 @@ export const Switcher = forwardRef(
     return (
       <span
         className={twMerge(
-          "inline-flex items-center gap-1",
+          "inline-flex items-center gap-1 relative",
           getGlobalPropsClasses(restProps)
         )}
       >

@@ -38,5 +38,6 @@ export type GlobalProps = {
   p?: RangeOf<1, 10>;
   px?: RangeOf<1, 10>;
   py?: RangeOf<1, 10>;
-  h?: 'full' | 'screen';
+  h?: 'full' | 'screen' | 'auto' | 'min' | 'max' | 'fit';
+  w?: 'full' | 'screen' | 'auto' | 'min' | 'max' | 'fit';
 };

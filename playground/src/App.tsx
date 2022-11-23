@@ -6,19 +6,18 @@ import {
   Typography,
   Grid,
   Group,
+  Absolute,
 } from "@maksimyakush/ui";
-import { lazy, Suspense, useState } from "react";
 
 export const App = () => {
   return (
     <div style={{ height: "30vh" }}>
-      <Group gap={1} position="between">
-        <Button color="secondary" variant="outlined">
-          Click
-        </Button>
-        <Button color="secondary">Click</Button>
-        <Button color="secondary">Click</Button>
-      </Group>
+      <Absolute content={<h1>Absolute</h1>}>
+        <Grid>
+          <Button>Click</Button>
+          <Button>Click</Button>
+        </Grid>
+      </Absolute>
     </div>
   );
 };

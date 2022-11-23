@@ -18,7 +18,7 @@ export const Group = ({
   return (
     <div
       className={twMerge(
-        "grid grid-flow-col content-center items-center box-border",
+        "grid relative grid-flow-col content-center items-center box-border",
         `gap-${gap}`,
         `justify-${position}`,
         getGlobalPropsClasses(restProps)

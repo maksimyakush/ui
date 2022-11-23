@@ -17,6 +17,7 @@ import '@maksimyakush/ui/lib/index.css';
 
 ### Currently available components
 
+- Absolute
 - Button
 - Container
 - Grid

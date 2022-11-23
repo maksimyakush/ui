@@ -1,11 +1,13 @@
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 import { twMerge } from "tailwind-merge";
 import { GlobalProps, RangeOf } from "../../../types";
 import { getGlobalPropsClasses } from "../../../utils/get-global-props";
-import { Column } from "./Column";
+import { Column, ColumnProps } from "./Column";
 
 type ColumnsListProps = {
-  children: ReactNode;
+  children:
+    | ReactElement<ColumnProps, typeof Column>
+    | ReactElement<ColumnProps, typeof Column>[];
   gap?: RangeOf<0, 10>;
   alignItems?: "start" | "center" | "end" | "stretch" | "baseline";
   alignContent?:
@@ -36,7 +38,8 @@ const ColumnsList = ({
   gap,
   children,
   ...restProps
-}: ColumnsListProps  & GlobalProps) => {
+}: ColumnsListProps & GlobalProps) => {
+
   return (
     <div
       className={twMerge(

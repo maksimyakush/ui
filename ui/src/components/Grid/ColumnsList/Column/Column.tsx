@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-type ColumnProps = {
+export type ColumnProps = {
   children: ReactNode;
   sm?: 3 | 4 | 6 | 12;
   md?: 3 | 4 | 6 | 12;
@@ -26,5 +26,3 @@ export const Column = ({ children, sm, md, lg, xl }: ColumnProps) => {
     </div>
   );
 };
-
-

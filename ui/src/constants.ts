@@ -13,5 +13,6 @@ export const GLOBAL_PROPS = [
   "p",
   "px",
   "py",
-  "h"
+  "h",
+  "w",
 ];

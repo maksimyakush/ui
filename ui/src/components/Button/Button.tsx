@@ -36,8 +36,16 @@ type VariantVaraints = ToLowercaseEnumValues<Variant>;
 
 const VARIANT_MAPS = {
   [Variant.OUTLINED]: {
-    [Color.PRIMARY]:
-      "text-primary-main border-2  border-primary-main hover:border-primary-light hover:text-primary-light transition duration-150 ease-out",
+    [Color.PRIMARY]: `
+        text-primary-main
+        border-2
+        border-primary-main
+        hover:border-primary-light
+        hover:text-primary-light
+        transition
+        duration-150
+        ease-out
+      `,
     [Color.SECONDARY]:
       "text-secondary-main border-2  border-secondary-main hover:border-secondary-light hover:text-secondary-light transition duration-150 ease-out",
   },
@@ -50,12 +58,13 @@ const VARIANT_MAPS = {
 };
 
 const SIZE_MAPS: Record<Size, string> = {
-  [Size.SM]: "p-1 text-sm",
+  [Size.SM]: "py-1 px-2 text-sm",
   [Size.MD]: "p-2 text-lg",
   [Size.LG]: "p-3 text-xl",
 };
 
-const DISABLED = "cursor-not-allowed opacity-50";
+const DISABLED =
+  "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-30";
 const FULL = "w-full";
 
 type ButtonProps<T> = {
@@ -80,7 +89,6 @@ export const Button = forwardRef(
       color = "primary",
       size = "md",
       disabled = false,
-      className,
       type = "button",
       full = false,
       onClick,
@@ -100,6 +108,7 @@ export const Button = forwardRef(
         type={type}
         className={twMerge(
           `
+            relative
             box-border
             appearance-none
             border-0
@@ -110,12 +119,12 @@ export const Button = forwardRef(
             tracking-widest
             bg-common-transparent
             rounded-lg
-            text-common-white`,
+            text-common-white
+          `,
           SIZE_MAPS[size],
           disabled && DISABLED,
           full && FULL,
           VARIANT_MAPS[variant][color],
-          className,
           getGlobalPropsClasses(restProps)
         )}
         onClick={onClick}
