@@ -144,6 +144,11 @@ module.exports = {
     "-bottom-10",
     "translate-y-[-50%]",
     "translate-x-[-50%]",
+    "grow",
+    "grow-0",
+    "flex-wrap",
+    "flex-nowrap",
+    "italic",
   ],
 
   theme: {
@@ -214,67 +219,9 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addBase, theme, addUtilities }) {
-      const newUtilities = {
-        ".t-h1": {
-          fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)",
-          fontWeight: theme("fontWeight.black"),
-          fontFamily: theme("fontFamily.nunito"),
-          lineHeight: theme("lineHeight.tight"),
-          letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 24% / 100%)",
-        },
-        ".t-h2": {
-          fontSize: "clamp(1.5rem, 1.2rem + 1.4286vw, 3rem)",
-          fontWeight: theme("fontWeight.black"),
-          fontFamily: theme("fontFamily.nunito"),
-          lineHeight: theme("lineHeight.tight"),
-          letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 24% / 100%)",
-        },
-        ".t-h3": {
-          fontSize: theme("fontSize.4xl"),
-          fontWeight: theme("fontWeight.bold"),
-          fontFamily: theme("fontFamily.nunito"),
-          lineHeight: theme("lineHeight.tight"),
-          letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 24% / 100%)",
-        },
-        ".t-h4": {
-          fontSize: theme("fontSize.3xl"),
-          fontWeight: theme("fontWeight.normal"),
-          fontFamily: theme("fontFamily.nunito"),
-          lineHeight: theme("lineHeight.normal"),
-          letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 24% / 100%)",
-        },
-        ".t-h5": {
-          fontSize: theme("fontSize.2xl"),
-          fontWeight: theme("fontWeight.normal"),
-          fontFamily: theme("fontFamily.nunito"),
-          lineHeight: theme("lineHeight.normal"),
-          letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 24% / 100%)",
-        },
-        ".t-h6": {
-          fontSize: theme("fontSize.xl"),
-          fontWeight: theme("fontWeight.medium"),
-          fontFamily: theme("fontFamily.nunito"),
-          lineHeight: theme("lineHeight.normal"),
-          letterSpacing: theme("letterSpacing.wide"),
-          color: "hsl(0deg 0% 24% / 100%)",
-        },
-        ".t-body1": {
-          fontSize: theme("fontSize.lg"),
-          fontWeight: theme("fontWeight.medium"),
-          fontFamily: theme("fontFamily.nunito"),
-          lineHeight: theme("lineHeight.normal"),
-          letterSpacing: theme("letterSpacing.normal"),
-          color: "hsl(0deg 0% 24% / 100%)", //grey.800
-        },
-      };
-
-      addUtilities(newUtilities, ["responsive", "hover"]);
+    plugin(function ({ addVariant }) {
+      addVariant("children", "&>*");
     }),
+    require('@tailwindcss/line-clamp'),
   ],
 };

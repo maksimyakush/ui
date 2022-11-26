@@ -1,4 +1,4 @@
-import { Typography } from "../../Typography";
+import { Text } from "../../Text";
 import { twMerge } from "tailwind-merge";
 
 export const Tab = ({
@@ -22,7 +22,7 @@ export const Tab = ({
       )}
       onClick={onClick}
     >
-      <Typography as="span">{label}</Typography>
+      <Text as="span">{label}</Text>
     </li>
   );
 };

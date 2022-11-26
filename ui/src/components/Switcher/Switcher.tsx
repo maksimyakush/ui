@@ -2,7 +2,7 @@ import { forwardRef, ForwardedRef } from "react";
 import { twMerge } from "tailwind-merge";
 import { GlobalProps, ToLowercase } from "../../types";
 import { getGlobalPropsClasses } from "../../utils/get-global-props";
-import { Typography } from "../Typography";
+import { Text } from "../Text";
 
 enum Color {
   PRIMARY = "primary",
@@ -90,9 +90,9 @@ export const Switcher = forwardRef(
           />
         </span>
         {label && (
-          <Typography as="label" htmlFor="switcher">
+          <Text as="label" htmlFor="switcher">
             {label}
-          </Typography>
+          </Text>
         )}
       </span>
     );

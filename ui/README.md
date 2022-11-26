@@ -24,4 +24,4 @@ import '@maksimyakush/ui/lib/index.css';
 - Group
 - Switcher
 - Tabs
-- Typography
+- Text

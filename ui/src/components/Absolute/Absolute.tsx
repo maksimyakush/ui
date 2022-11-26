@@ -1,4 +1,4 @@
-import { Children, cloneElement, ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 import { twMerge } from "tailwind-merge";
 import { GlobalProps } from "../../types";
 import { getGlobalPropsClasses } from "../../utils/get-global-props";
@@ -19,7 +19,6 @@ type DirectionValues =
   | "1/2";
 type AbsoluteProps = {
   children: ReactElement;
-  content: ReactNode;
   left?: DirectionValues | "1/2-translate";
   right?: DirectionValues;
   top?: DirectionValues | "1/2-translate";
@@ -78,38 +77,26 @@ const getAbsolutClasses = ({
 
 export const Absolute = ({
   children,
-  content,
   left = "auto",
   right = "auto",
   top = "auto",
   bottom = "auto",
   ...restProps
 }: AbsoluteProps & GlobalProps) => {
-  const a = Children.map(children, (child, key) => {
-    if (key === 0) {
-      return cloneElement(child, {
-        children: [
-          child.props.children ? [...child.props.children] : undefined,
-          <div
-            className={twMerge(
-              "absolute w-full",
-              getAbsolutClasses({
-                top,
-                left,
-                right,
-                bottom,
-              }),
-              getGlobalPropsClasses(restProps)
-            )}
-          >
-            {content}
-          </div>,
-        ].filter(Boolean),
-      });
-    }
-
-    return child;
-  });
-
-  return <>{a}</>;
+  return (
+    <div
+      className={twMerge(
+        "absolute",
+        getAbsolutClasses({
+          top,
+          left,
+          right,
+          bottom,
+        }),
+        getGlobalPropsClasses(restProps)
+      )}
+    >
+      {children}
+    </div>
+  );
 };

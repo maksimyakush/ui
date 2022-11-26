@@ -1,5 +1,5 @@
 import { Absolute } from "./Absolute";
-import { Typography } from "../Typography";
+import { Text } from "../Text";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 export default {
@@ -8,16 +8,17 @@ export default {
 } as ComponentMeta<typeof Absolute>;
 
 const Template: ComponentStory<typeof Absolute> = (args) => (
-  <Absolute {...args}>
-    <div
-      style={{
-        height: 300,
-        width: 300,
-        position: "relative",
-        backgroundColor: "grey",
-      }}
-    ></div>
-  </Absolute>
+  <div
+    style={{
+      height: 300,
+      width: 300,
+      position: "relative",
+      backgroundColor: "grey",
+    }}
+  >
+    <Text weight={900} color='info.dark'>Relative text 😀</Text>
+    <Absolute {...args}></Absolute>
+  </div>
 );
 
 export const Playground = Template.bind({});
@@ -26,5 +27,5 @@ Playground.args = {
   bottom: "auto",
   right: "auto",
   left: "auto",
-  content: <div style={{ backgroundColor: "yellow" }}>Absolute</div>,
+  children: <Text color='secondary' weight={900} >Absolute text</Text>,
 };
