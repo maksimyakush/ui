@@ -7,7 +7,7 @@
     "README.md"
   ],
   "name": "@maksimyakush/ui",
-  "version": "1.0.28",
+  "version": "1.0.30",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {

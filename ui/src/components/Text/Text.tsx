@@ -76,9 +76,9 @@ type LineClampVariants = typeof LineClamp[number];
 
 const VARIANT_MAPS: Record<Variant, string> = {
   [Variant.H1]:
-    "font-black font-nunito text-5xl leading-tight tracking-widest text-grey-800",
+    "font-black font-nunito leading-tight tracking-widest text-grey-800 text-h1",
   [Variant.H2]:
-    "font-black font-nunito text-4xl leading-tight tracking-widest text-grey-800",
+    "font-black font-nunito  leading-tight tracking-widest text-grey-800 text-h2",
   [Variant.H3]:
     "font-black font-nunito text-3xl leading-tight tracking-widest text-grey-800",
   [Variant.H4]:
@@ -199,7 +199,7 @@ export const Text = <C extends ElementType = "p">({
   lineclamp = "none",
   ...restProps
 }: TextProps<C> & ComponentPropsWithoutRef<C> & GlobalProps) => {
-  const Component = as || "p";
+  const Component = as || (variant !== "body1" && variant) || "p";
   const { rest } = extractGlobalProps(restProps);
 
   return (

@@ -153,17 +153,9 @@ module.exports = {
 
   theme: {
     extend: {
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            h1: {
-              color: theme("colors.common.white"),
-            },
-          },
-        },
-      }),
-      spacing: {
-        4: "1rem",
+      fontSize: {
+        h1: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)",
+        h2: "clamp(1.5rem, 1.2rem + 1.4286vw, 3rem)",
       },
     },
     fontFamily: {
@@ -218,10 +210,11 @@ module.exports = {
       },
     },
   },
+
   plugins: [
     plugin(function ({ addVariant }) {
       addVariant("children", "&>*");
     }),
-    require('@tailwindcss/line-clamp'),
+    require("@tailwindcss/line-clamp"),
   ],
 };
