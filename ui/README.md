@@ -23,5 +23,6 @@ import '@maksimyakush/ui/lib/index.css';
 - Grid
 - Group
 - Switcher
+- Spinner
 - Tabs
 - Text

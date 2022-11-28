@@ -14,8 +14,8 @@ export default {
   },
   plugins: [
     ts(),
+    resolve({ browser: true }),
     commonjs(),
-    resolve(),
     postcss({
       extract: true,
       extensions: [".css"],

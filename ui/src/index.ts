@@ -7,3 +7,4 @@ export { Container } from "./components/Container";
 export { Grid } from "./components/Grid";
 export { Group } from "./components/Group";
 export { Absolute } from "./components/Absolute";
+export { Spinner } from "./components/Spinner";

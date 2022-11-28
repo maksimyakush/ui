@@ -7,11 +7,13 @@ import {
   Grid,
   Group,
   Absolute,
+  Spinner
 } from "@maksimyakush/ui";
 
 export const App = () => {
   return (
     <div style={{ height: "90vh", position: 'relative' }}>
+      <Spinner loading />
       <Grid
         h="full"
       >
